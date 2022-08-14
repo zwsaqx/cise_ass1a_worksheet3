@@ -10,6 +10,12 @@ const app = express();
 
 // Connect Database
 connectDB();
+if (process.env.NODE_ENV === 'production') {
+  // serve front-end client from build folder
+  app.use(express.static(__dirname+'/../frontend/public'));
+  app.get('*', (req, res) =>{
+    res.sendFile(__dirname+'/../frontend/public/index.html')
+  });
 
 // cors
 app.use(cors({ origin: true, credentials: true }));
