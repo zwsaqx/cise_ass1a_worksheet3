@@ -1,0 +1,38 @@
+{
+  "name": "mern_a_to_z",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: Link to React Tests\" && exit 1",
+    "prepare-backend": "npm install",
+    "prepare-react": "cd frontend && npm install",
+    "build-react": "cd frontend && npm run build",
+    "test-react": "cd frontend && npm test",
+    "start": "node app.js",
+    "app": "nodemon app.js",
+    "heroku-postbuild": "npm run prepare-react && npm run build-react"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zwsaqx/cise_ass1a_worksheet3.git"
+  },
+  "author": "Zach Annabell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zwsaqx/cise_ass1a_worksheet3/issues"
+  },
+  "homepage": "https://github.com/zwsaqx/cise_ass1a_worksheet3#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "config": "^3.3.7",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.1",
+    "validation": "^0.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
