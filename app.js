@@ -17,6 +17,9 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(__dirname+'/../frontend/public/index.html')
   });
 
+} else {
+  app.get('/', (req, res) => res.send('Hello world!'));
+}
 // cors
 app.use(cors({ origin: true, credentials: true }));
 
